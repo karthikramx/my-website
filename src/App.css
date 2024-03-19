@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  font: 1.5em;
+  font-size: 5em;
+  margin: 0.25em 0;
+  color: #065970;
+}
+
+/* h2 {
+  font: 1.5em;
+  font-size: 3em;
+  margin: 0.25em 0;
+  color: #3f2fcd;
+} */
+
+h2 :hover {
+  font: 1.5em;
+  font-size: 2em;
+  margin: 0.25em 0;
+  color: #cd592f;
+  color: #3f2fcd;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}

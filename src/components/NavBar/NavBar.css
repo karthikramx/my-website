@@ -1,0 +1,38 @@
+/* NavBar.css */
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex; /* Add this */
+    justify-content: space-between; /* Add this */
+    align-items: center; /* Add this */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: sans-serif;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+.logo {
+    height: 70px;
+}
