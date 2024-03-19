@@ -1,10 +1,15 @@
 /* NavBar.css */
-nav {
+nav { 
     background-color: #333;
     display: flex; /* Add this */
     justify-content: space-between; /* Add this */
     align-items: center; /* Add this */
+    position: fixed; /* Add this */
+    width: 100%;
+    top: 0;
+    left: 0;
     border: none;
+    box-shadow: none;
 }
 
 nav ul {

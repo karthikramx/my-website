@@ -3,7 +3,7 @@ import React from 'react';
 const Projects = () => {
     return (
         <div>
-            <h1>Projects</h1>
+            <h1 style={{ marginTop: "100px" }}>Projects</h1>
             {/* Add your project content here */}
         </div>
     );
