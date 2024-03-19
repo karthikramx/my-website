@@ -28,19 +28,3 @@ function App() {
 }
 
 export default App;
-
-
-// TODO:
-// 1. Add a Navigation Bar
-// 2. Add a Footer
-// 3. Add a Contact Form
-// 4. Add a Projects Section
-// 5. Add a Skills Section
-// 6. Add a About Me Section
-// 7. Add a Blog Section
-// 8. Add a Resume Section
-// 9. Add a Testimonials Section
-// 10. Add a Services Section
-// 11. Add a Portfolio Section
-// 12. Add a Pricing Section
-// 13. Add a FAQ Section
