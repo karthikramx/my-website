@@ -1,10 +1,10 @@
 /* NavBar.css */
 nav {
     background-color: #333;
-    padding: 10px;
     display: flex; /* Add this */
     justify-content: space-between; /* Add this */
     align-items: center; /* Add this */
+    border: none;
 }
 
 nav ul {
@@ -25,7 +25,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
     
 }
 

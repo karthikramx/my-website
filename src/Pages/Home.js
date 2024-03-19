@@ -7,14 +7,16 @@ function Home() {
         width: "500px",
         height: "500px",
         objectFit: "cover",
-        objectPosition: "center"
+        objectPosition: "center",
+        padding: "20px"
     };
 
     const divStyle = {
         display: 'flex',
+        flixDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '50vh'
+        height: 'auto'
     };
 
     return (
@@ -23,10 +25,10 @@ function Home() {
                 <img src={me} alt='Test' style={imageStyle} />
             </div>
             <h1>Karthik Ram</h1>
-            <h3 style={{ color: "gray", lineHeight: "2" }}>Hello, <br />
+            <h4 style={{ color: "gray", lineHeight: "1" }}>Hello,
                 Welcome to my little corner on the internet! <br />
                 I’m a maker at heart and I like to build things from scratch. <br /> I’m exploring data science, machine learning,Generative AI, Business Analytics and Automation.<br />
-                I’m documenting everything I learn and make here and hope to see it become <br /> an awesome repository of my life’s work</h3>
+                I’m documenting everything I learn and make here and hope to see it become <br /> an awesome repository of my life’s work</h4>
         </div>
     );
 }

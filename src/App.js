@@ -15,7 +15,7 @@ function App() {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route path="/" render={() => <Home />} />
+            <Route exact path="/" render={() => <Home />} />
             <Route path="/about" render={() => <About />} />
             <Route path="/portfolio" render={() => <Portfolio />} />
             <Route path="/projects" render={() => <Projects />} />
