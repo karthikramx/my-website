@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SideBar.css'; // Import your CSS file
 
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(true); // State to control whether the sidebar is open
+    const [isOpen, setIsOpen] = useState(false); // State to control whether the sidebar is open
 
     return (
         <div>

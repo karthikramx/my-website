@@ -8,7 +8,7 @@
     top: 0;
     transform: translateX(-100%); /* Change this */
     transition: transform 0.3s ease-in-out;
-    background-color: rgb(21, 165, 117);
+    background-color: rgb(6, 71, 49);
     opacity: 0.6;
 }
 
@@ -22,11 +22,13 @@
     top: 50%;
     right: -25px; /* Adjust as needed */
     transform: translateY(-50%);
-    /* make the button circular */
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #338223;
-    opacity: 0.8;
-    font-size: 20px; 
+    background-color: #085040;
+    font-size: 40px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    box-shadow: 0 0px 10px 5px #05886b;
+    transition: box-shadow 1s ease-in-out;
 }
