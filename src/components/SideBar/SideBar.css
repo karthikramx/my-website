@@ -1,0 +1,32 @@
+/* SideBar.css */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0; /* Change this */
+    top: 0;
+    transform: translateX(-100%); /* Change this */
+    transition: transform 0.3s ease-in-out;
+    background-color: rgb(21, 165, 117);
+    opacity: 0.6;
+}
+
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar button {
+    position: absolute;
+    top: 50%;
+    right: -25px; /* Adjust as needed */
+    transform: translateY(-50%);
+    /* make the button circular */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #338223;
+    opacity: 0.8;
+    font-size: 20px; 
+}
