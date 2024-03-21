@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Blog from './Pages/Blog';
 import Portfolio from './Pages/Portfolio';
 import Projects from './Pages/Projects';
 import './App.css';
@@ -13,7 +14,7 @@ import Sidebar from './components/SideBar/SideBar';
 // 1. Add a SideBar
 // 2. Add a blog page
 // 3. Add a cards component - Image, with title and description
-// 4. Create a blog page - that renders from medium
+// 4. Create a blog page - that renders from medium : https://medium.com/@cndro/how-to-get-data-from-medium-api-ca3b3a660a81
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <Home />} />
             <Route path="/about" render={() => <About />} />
+            <Route path="/blog" render={() => <Blog />} />
             <Route path="/portfolio" render={() => <Portfolio />} />
             <Route path="/projects" render={() => <Projects />} />
           </Switch>

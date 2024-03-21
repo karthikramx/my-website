@@ -9,7 +9,7 @@ nav {
     top: 0;
     left: 0;
     border: none;
-    box-shadow: none;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 
@@ -23,7 +23,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 20px;
     font-family: sans-serif;
 }
@@ -31,7 +31,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 1.2em;
     
 }
 
