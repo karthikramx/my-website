@@ -9,8 +9,7 @@ const Card2 = ({ image, title, description, link }) => {
             <img src={image} alt={title} />
             <h4>{title}</h4>
             <p>{description}</p>
-            <a href={link}>Go to Project</a>
-            {console.log(link)}
+            <Link to={link}>Read More</Link>
         </div>
     );
 }
