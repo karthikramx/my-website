@@ -5,7 +5,7 @@ const Projects = () => {
 
     const projects = [
         {
-            link: "/projects/RAG",
+            link: "https://llm-frontend-hazel.vercel.app/",
             title: "Retrieval Augmented Generation",
             description: "Description of the project",
             image: "https://picsum.photos/200/300",
