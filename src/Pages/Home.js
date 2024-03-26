@@ -20,14 +20,16 @@ function Home() {
 
     return (
         <div>
-            <div style={imageDivSytle}>
-                <img src={me} alt='Test' style={imageStyle} />
-            </div>
-            <h1>Karthik Ram</h1>
-            <h4 style={{ color: "gray", lineHeight: "2" }}>Hello,
-                Welcome to my little corner on the internet! <br />
-                I’m a maker at heart and I like to build things from scratch. <br /> I’m exploring data science, machine learning,Generative AI, Business Analytics and Automation.<br />
-                I’m documenting everything I learn and make here and hope to see it become <br /> an awesome repository of my life’s work</h4>
+            <section style={{ marginTop: "100px" }}>
+                <div style={imageDivSytle}>
+                    <img src={me} alt='Test' style={imageStyle} />
+                </div>
+                <h1>Karthik Ram</h1>
+                <h4 style={{ color: "gray", lineHeight: "2" }}>Hello,
+                    Welcome to my little corner on the internet! <br />
+                    I’m a maker at heart and I like to build things from scratch. <br /> I’m exploring Generative AI, Product Design & Engineering<br />
+                    I’m documenting everything I learn and make here and hope to see it become <br /> an awesome repository of my life’s work</h4>
+            </section>
         </div>
     );
 }

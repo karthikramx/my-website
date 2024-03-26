@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
-import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Portfolio from './Pages/Portfolio';
 import Projects from './Pages/Projects';
+import ProjectRAG from './Pages/ProjectPages/ProjectRAG/ProjectRAG';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
@@ -26,9 +26,9 @@ function App() {
           <Sidebar />
           <Switch>
             <Route exact path="/" render={() => <Home />} />
-            <Route path="/about" render={() => <About />} />
             <Route path="/blog" render={() => <Blog />} />
             <Route path="/portfolio" render={() => <Portfolio />} />
+            <Route exact path="/projects/RAG" render={() => <ProjectRAG />} />
             <Route path="/projects" render={() => <Projects />} />
           </Switch>
           <Footer />

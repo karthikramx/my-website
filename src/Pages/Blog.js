@@ -112,14 +112,3 @@ export default function Blog() {
         </section>
     );
 }
-
-
-// const Blog = () => {
-//     return (
-//         <div>
-//             <h1 style={{ marginTop: "100px" }}>Blog</h1>
-//             {/* Add your blog content here */}
-//         </div>
-//     );
-// };
-
