@@ -1,4 +1,5 @@
 import React from 'react';
+import ListBox from '../../../components/ListBox/ListBox';
 
 const ProjectRAG = () => {
     return (
@@ -12,11 +13,7 @@ const ProjectRAG = () => {
                 4. See if you are able to stream the text from langchain
                 5. Delete all topics
                 */}
-
-
-
-
-
+                <ListBox />
             </section>
         </div>
     );

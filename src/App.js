@@ -11,11 +11,8 @@ import Sidebar from './components/SideBar/SideBar';
 
 
 // TODO: 
-// 1. Add a SideBar
-// 2. Add a blog page
-// 3. Add a cards component - Image, with title and description
-// 4. Create a blog page - that renders from medium : https://medium.com/@cndro/how-to-get-data-from-medium-api-ca3b3a660a81
-
+// 1. Add the QnA Application to the RAG Page
+// 2. 
 
 function App() {
   return (
