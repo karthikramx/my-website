@@ -48,6 +48,7 @@ export default function Blog() {
             try {
                 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@karthikramx');
                 const data = await res.json();
+                console.log(data);
                 const items = data.items;
                 setItems(items);
             } catch {

@@ -1,0 +1,23 @@
+.ListBox {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.ListBox button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.ListBox button:hover {
+    background-color: #45a049;
+}

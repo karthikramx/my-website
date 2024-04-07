@@ -1,19 +1,26 @@
 import React from 'react';
+//import the ListBox css
+import './ListBox.css';
+import { useState } from 'react';
 
-const ListBox = () => {
+const ListBox = (props) => {
     // Your code here
+    const [selectedTopic, setSelectedTopic] = useState("");
 
-    const options = ['Option 1', 'Option 2', 'Option 3'];
+    const handleChange = (event) => {
+        setSelectedTopic(event.target.value);
+    }
+
 
     return (
         <div>
             <div>
-                <select>
-                    {options.map((option, index) => (
+                <select className='ListBox' defaultValue={"Loading Topics..."} onChange={handleChange}>
+                    {props.options.map((option, index) => (
                         <option key={index} value={option}>{option} </option>
                     ))}
                 </select>
-                <button>Submit</button>
+                <button className='ListBox button' onClick={() => props.onClick(selectedTopic)}>Submit</button>
             </div>
         </div>
     );
