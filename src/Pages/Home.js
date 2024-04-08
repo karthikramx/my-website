@@ -25,10 +25,11 @@ function Home() {
                     <img src={me} alt='Test' style={imageStyle} />
                 </div>
                 <h1>Karthik Ram</h1>
-                <h4 style={{ color: "gray", lineHeight: "2" }}>Hello,
-                    Welcome to my little corner on the internet! <br />
-                    I’m a maker at heart and I like to build things from scratch. <br /> I’m exploring Generative AI, Product Design & Engineering<br />
-                    I’m documenting everything I learn and make here and hope to see it become <br /> an awesome repository of my life’s work</h4>
+                <h4 style={{ color: "gray", lineHeight: "2" }}>
+                    Hello, <br />
+                    Welcome to my digital domain! <br />
+                    I am a passionate maker who enjoys crafting from scratch. My interests span Generative AI, Product Design, and Engineering. <br />
+                    Here, I meticulously document my journey, aiming to transform this space into a distinguished repository of my life’s work.</h4>
             </section>
         </div>
     );

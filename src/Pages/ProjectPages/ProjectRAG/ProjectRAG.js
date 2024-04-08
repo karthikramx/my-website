@@ -1,6 +1,7 @@
 import React from 'react';
 import ListBox from '../../../components/ListBox/ListBox';
 import { useState, useEffect } from 'react';
+import image from '../../../assets/RAGDeployed.jpg'
 
 const ProjectRAG = () => {
     const [selectedTopic, setTopic] = useState('');
@@ -66,6 +67,7 @@ const ProjectRAG = () => {
         <div>
             <section style={{ marginTop: "100px" }}>
                 <h1>Retrieval Augmented Generation</h1>
+
                 {/* Add your component content here
                 1. (done) Add a searchable dropdown
                 2. Add a text box with a button to search and add a topic
@@ -76,6 +78,7 @@ const ProjectRAG = () => {
                 7. Link and show the wikipedia page
                 */}
                 <ListBox options={topics} onClick={handleTopicChange} />
+                <img src={image} alt="RAGDeployed" />
             </section>
         </div>
     );
