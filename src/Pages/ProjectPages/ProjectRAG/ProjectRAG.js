@@ -3,6 +3,7 @@ import ListBox from '../../../components/ListBox/ListBox';
 import InputBox from '../../../components/InputBox/InputBox';
 import BoxHolder from '../../../components/BoxHolder/BoxHolder';
 import Button from '../../../components/Button/Button';
+import Spinner from '../../../components/Spinner/Spinner';
 import { useState, useEffect } from 'react';
 import image from '../../../assets/RAGDeployed.jpg'
 
@@ -15,8 +16,10 @@ const ProjectRAG = () => {
 
 
     const handleTopicChange = (topic) => {
-        if (topic === '' || !topics.includes(topic)) {
+        setLoading(true);
+        if (topic === '') {
             alert("Please select a topic");
+            setLoading(false);
             return;
         }
         const response = fetch(`https://llmbackend.fly.dev/settopic`,
@@ -26,6 +29,7 @@ const ProjectRAG = () => {
                 body: JSON.stringify({ "topic": topic })
             });
         console.log(response)
+        setLoading(false);
         setTopic(topic);
     }
 
@@ -53,6 +57,7 @@ const ProjectRAG = () => {
     }
 
     useEffect(() => {
+        setLoading(true);
         const loadTopics = async () => {
             const response = await fetch(`https://llmbackend.fly.dev/listtopics`,
                 {
@@ -60,9 +65,11 @@ const ProjectRAG = () => {
                     method: 'GET'
                 });
             const data = await response.json();
+            if (data.topics) {
+                setLoading(false);
+            }
             setTopics(data.topics);
         }
-
         loadTopics();
     }, []);
 
@@ -70,30 +77,36 @@ const ProjectRAG = () => {
         <div>
             <section style={{ marginTop: "100px" }}>
                 <h1>Retrieval Augmented Generation</h1>
-
-                {/* Add your component content here
-                1. (done) Add a searchable dropdown
-                2. Add a text box with a button to search and add a topic
-                3. Question and Answering chat component based on the topic
-                4. Delete all topics
-                5. Display current topic being used
-                6. Let the end point also return the consine similarity matches
-                7. Link and show the wikipedia page
-                */}
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    {loading ? <Spinner /> : <div style={{ width: '30px', height: '37px' }} />}
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <BoxHolder heading={"Select Topic"}>
                         <ListBox options={topics} onClick={handleTopicChange} />
                     </BoxHolder>
+                    <BoxHolder heading={"Current Topic"}>
+                        <p style={{ width: '150px' }}>{selectedTopic}</p>
+                    </BoxHolder>
                     <BoxHolder heading={"Create Topic"}>
                         <InputBox options={topics} onClick={handleTopicChange} />
                     </BoxHolder>
-                    <BoxHolder heading={"Delete Topics"}>
+                    <BoxHolder heading={"Delete"}>
                         <Button title={"Delete All Topics"} onClickHandler={() => { }} />
                     </BoxHolder>
+
                 </div>
-
+                <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <BoxHolder heading={"Question"}>
+                            <input style={{ width: '600px', height: '30px', marginRight: '10px', fontSize: '16px' }} onChange={(event) => setQuestion(event.target.value)}></input>
+                            <Button title={"Ask"} onClickHandler={handleQuestion} />
+                        </BoxHolder>
+                        <BoxHolder heading={"Answer"}>
+                            <p style={{ width: '650px', height: '120px' }}>{answer}</p>
+                        </BoxHolder>
+                    </div>
+                </div>
                 <hr style={{ width: '70%' }} />
-
                 <img src={image} alt="RAGDeployed" />
             </section>
         </div>
