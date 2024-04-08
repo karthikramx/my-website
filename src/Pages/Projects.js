@@ -1,5 +1,6 @@
 import React from 'react';
 import Card2 from '../components/Card2/Card';
+import ProjectRAG from '../../src/assets/RAGDeployed.jpg';
 
 const Projects = () => {
 
@@ -8,7 +9,7 @@ const Projects = () => {
             link: "/projects/RAG",
             title: "Retrieval Augmented Generation",
             description: "Description of the project",
-            image: "https://picsum.photos/200/300",
+            image: ProjectRAG,
             route: "/projects/RAG"
         },
     ]
