@@ -4,8 +4,8 @@ import me from '../assets/me.JPG';
 function Home() {
     const imageStyle = {
         borderRadius: "50%",
-        width: "500px",
-        height: "500px",
+        width: "300px",
+        height: "300px",
         objectFit: "cover",
         objectPosition: "center",
     };
@@ -26,10 +26,10 @@ function Home() {
                 </div>
                 <h1>Karthik Ram</h1>
                 <h4 style={{ color: "gray", lineHeight: "2" }}>
-                    Hello, <br />
-                    Welcome to my digital domain! <br />
-                    I am a passionate maker who enjoys crafting from scratch. My interests span Generative AI, Product Design, and Engineering. <br />
-                    Here, I meticulously document my journey, aiming to transform this space into a distinguished repository of my life’s work.</h4>
+                    Hello! <br />
+                    Welcome to my digital domain... <br />
+                    I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
+                    Here, I meticulously document my journey, aiming to transform this space into a awesome repository of my life’s work.</h4>
             </section>
         </div>
     );

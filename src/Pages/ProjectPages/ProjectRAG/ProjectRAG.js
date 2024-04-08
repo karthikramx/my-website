@@ -1,5 +1,8 @@
 import React from 'react';
 import ListBox from '../../../components/ListBox/ListBox';
+import InputBox from '../../../components/InputBox/InputBox';
+import BoxHolder from '../../../components/BoxHolder/BoxHolder';
+import Button from '../../../components/Button/Button';
 import { useState, useEffect } from 'react';
 import image from '../../../assets/RAGDeployed.jpg'
 
@@ -77,7 +80,20 @@ const ProjectRAG = () => {
                 6. Let the end point also return the consine similarity matches
                 7. Link and show the wikipedia page
                 */}
-                <ListBox options={topics} onClick={handleTopicChange} />
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <BoxHolder heading={"Select Topic"}>
+                        <ListBox options={topics} onClick={handleTopicChange} />
+                    </BoxHolder>
+                    <BoxHolder heading={"Create Topic"}>
+                        <InputBox options={topics} onClick={handleTopicChange} />
+                    </BoxHolder>
+                    <BoxHolder heading={"Delete Topics"}>
+                        <Button title={"Delete All Topics"} onClickHandler={() => { }} />
+                    </BoxHolder>
+                </div>
+
+                <hr style={{ width: '70%' }} />
+
                 <img src={image} alt="RAGDeployed" />
             </section>
         </div>

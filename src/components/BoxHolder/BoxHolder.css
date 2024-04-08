@@ -1,0 +1,19 @@
+.box {
+    position: relative; 
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+}
+  
+.box-heading {
+    position: absolute; /* Add this */
+    top: -10px; /* Add this */
+    left: 10px; /* Add this */
+    background: #fff; /* Add this */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+  
+  
