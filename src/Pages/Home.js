@@ -31,6 +31,7 @@ function Home() {
                     I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
                     Here, I meticulously document my journey, aiming to transform this space into a awesome repository of my life’s work.</h4>
             </section>
+            <section style={{ marginTop: "40px" }} />
         </div>
     );
 }

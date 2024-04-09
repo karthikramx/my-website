@@ -8,8 +8,8 @@ const Portfolio = () => {
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <img src={MyPortfolio} alt='Portfolio' style={{ width: '80%' }} />
                 </div>
-
             </div>
+            <section style={{ marginTop: "40px" }} />
         </div>
     );
 };

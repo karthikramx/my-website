@@ -85,7 +85,7 @@ const ProjectRAG = () => {
                         <ListBox options={topics} onClick={handleTopicChange} />
                     </BoxHolder>
                     <BoxHolder heading={"Current Topic"}>
-                        <p style={{ width: '150px' }}>{selectedTopic}</p>
+                        <p style={{ width: '150px', border: '1px solid gray' }}>{selectedTopic}</p>
                     </BoxHolder>
                     <BoxHolder heading={"Create Topic"}>
                         <InputBox options={topics} onClick={handleTopicChange} />
@@ -109,6 +109,7 @@ const ProjectRAG = () => {
                 <hr style={{ width: '70%' }} />
                 <img src={image} alt="RAGDeployed" />
             </section>
+            <section style={{ marginTop: "40px" }} />
         </div>
     );
 };
