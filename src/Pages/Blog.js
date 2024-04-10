@@ -2,11 +2,13 @@ import React from 'react';
 import Card from '../components/Card/Card';
 import { useEffect, useState } from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import Spinner from '../components/Spinner/Spinner';
 
 
 export default function Blog() {
     const [items, setItems] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     function extractImageLinks(html) {
         ReactHtmlParser(html);
@@ -46,11 +48,13 @@ export default function Blog() {
     useEffect(() => {
         async function fetchData() {
             try {
+                setLoading(true);
                 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@karthikramx');
                 const data = await res.json();
                 console.log(data);
                 const items = data.items;
                 setItems(items);
+                setLoading(false);
             } catch {
                 setError(true);
             }
@@ -80,9 +84,11 @@ export default function Blog() {
     }
 
     return (
-        <section style={{ marginTop: "100px" }}>
+        <section style={{ marginTop: "100px", marginBottom: "40px" }}>
+
             <div>
                 <h1>My Blogs</h1>
+                {loading ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: "40px" }}><Spinner /></div> : <div />}
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
@@ -98,18 +104,10 @@ export default function Blog() {
                                 link={item.link}
                                 image={extractImageLinks(item.content)}
                             />)
-
-
                     })}
                 </div>
-                <a
-                    href={"https://karthikramx.medium.com/"}
-                    target={"_blank"}
-                    rel={"noopener noreferrer"}
-                >
-                    Read More on Medium
-                </a>
             </div>
         </section>
+
     );
 }
