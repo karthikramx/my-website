@@ -37,10 +37,14 @@ export default function Blog() {
 
         ReactHtmlParser(html, { transform });
 
+        const textFromParagraphs = paragraphs.join(' ');
+
         //Limit the number of characters to 100
-        if (paragraphs[0] && paragraphs[0].length > 100) {
-            return `${paragraphs[0].substring(0, 100)}...`
-        }
+        // if (paragraphs[0] && paragraphs[0].length > 100) {
+        //     return `${paragraphs[0].substring(0, 100)}...`
+        // }
+
+        return `${textFromParagraphs.substring(0, 100)}...`
 
 
     }
@@ -97,6 +101,7 @@ export default function Blog() {
                     marginTop: "40px"
                 }}>
                     {items.map((item, index) => {
+                        //console.log(item.description);
                         return (
                             <Card
                                 key={index}

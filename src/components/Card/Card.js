@@ -10,8 +10,6 @@ const Card = ({ image, title, description, link }) => {
             <p>{description}</p>
             <a href={link} target="_blank" rel="noopener noreferrer">Read More</a>
         </div>
-
-
     );
 }
 
