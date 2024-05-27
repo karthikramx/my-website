@@ -33,13 +33,13 @@ export default function Blog() {
             if (node.type === 'tag' && node.name === 'p') {
                 paragraphs.push(node.children[0].data);
             }
-        };
+        }
 
         ReactHtmlParser(html, { transform });
 
-        //limit the number of characters to 100
+        //Limit the number of characters to 100
         if (paragraphs[0] && paragraphs[0].length > 100) {
-            return paragraphs[0].substring(0, 100) + "...";
+            return `${paragraphs[0].substring(0, 100)}...`
         }
 
 
@@ -50,13 +50,14 @@ export default function Blog() {
             try {
                 setLoading(true);
                 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@karthikramx');
-                const data = await res.json();
-                console.log(data);
-                const items = data.items;
+                const { items } = await res.json();
+                console.log(items);
                 setItems(items);
-                setLoading(false);
-            } catch {
+            } catch (error) {
+                console.error("Failed to fetch data", error);
                 setError(true);
+            } finally {
+                setLoading(false);
             }
         }
 
@@ -85,15 +86,15 @@ export default function Blog() {
 
     return (
         <section style={{ marginTop: "100px", marginBottom: "40px" }}>
-
             <div>
                 <h1>My Blogs</h1>
-                {loading ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: "40px" }}><Spinner /></div> : <div />}
+                {loading && <div style={{ display: 'flex', justifyContent: 'center', marginTop: "40px" }}><Spinner /></div>}
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
                     alignItems: 'center',
                     justifyItems: 'center',
+                    marginTop: "40px"
                 }}>
                     {items.map((item, index) => {
                         return (

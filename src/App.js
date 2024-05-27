@@ -13,7 +13,6 @@ import Sidebar from './components/SideBar/SideBar';
 
 // TODO: 
 // 1. Add the QnA Application to the RAG Page
-// 2. 
 
 function App() {
   return (
