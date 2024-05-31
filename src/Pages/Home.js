@@ -19,17 +19,23 @@ function Home() {
     };
 
     return (
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <section style={{ marginTop: "100px" }}>
-                <div style={imageDivSytle}>
-                    <img src={me} alt='Test' style={imageStyle} />
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div>
+                        <div style={imageDivSytle}>
+                            <img src={me} alt='Test' style={imageStyle} />
+                        </div>
+                        <h1 style={{ textAlign: 'center' }}>Karthik Ram</h1>
+                    </div>
+                    <div style={{ marginLeft: '50px' }}>
+                        <h4 style={{ color: "gray", lineHeight: "2", textAlign: 'center' }}>
+                            Hello! <br />
+                            Welcome to my digital domain... <br />
+                            I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
+                            Here, I meticulously document my journey, <br /> aiming to transform this space into a awesome repository of my life’s work.</h4>
+                    </div>
                 </div>
-                <h1>Karthik Ram</h1>
-                <h4 style={{ color: "gray", lineHeight: "2" }}>
-                    Hello! <br />
-                    Welcome to my digital domain... <br />
-                    I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
-                    Here, I meticulously document my journey, aiming to transform this space into a awesome repository of my life’s work.</h4>
             </section>
             <section style={{ marginTop: "40px" }} />
         </div>

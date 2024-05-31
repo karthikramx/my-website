@@ -1,6 +1,5 @@
 /* NavBar.css */
 nav { 
-    background-color: #333;
     display: flex; /* Add this */
     justify-content: space-between; /* Add this */
     align-items: center; /* Add this */
@@ -9,7 +8,7 @@ nav {
     top: 0;
     left: 0;
     border: none;
-    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+
     z-index: 2;
 }
 

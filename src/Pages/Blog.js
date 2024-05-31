@@ -44,7 +44,7 @@ export default function Blog() {
         //     return `${paragraphs[0].substring(0, 100)}...`
         // }
 
-        return `${textFromParagraphs.substring(0, 100)}...`
+        return `${textFromParagraphs.substring(0, 50)}...`
 
 
     }
@@ -98,7 +98,8 @@ export default function Blog() {
                     gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
                     alignItems: 'center',
                     justifyItems: 'center',
-                    marginTop: "40px"
+                    marginTop: "40px",
+                    gridGap: "20px"
                 }}>
                     {items.map((item, index) => {
                         //console.log(item.description);
@@ -114,6 +115,5 @@ export default function Blog() {
                 </div>
             </div>
         </section>
-
     );
 }

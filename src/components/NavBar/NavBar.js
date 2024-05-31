@@ -9,16 +9,19 @@ const NavBar = () => {
             <img src={logo} alt="Logo" className='logo' />
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" style={{ color: 'black' }}>Home</Link>
                 </li>
                 <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog" style={{ color: 'black' }}>Blog</Link>
                 </li>
                 <li>
-                    <Link to="/portfolio">Portfolio</Link>
+                    <Link to="/portfolio" style={{ color: 'black' }}>Portfolio</Link>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/projects" style={{ color: 'black' }}>Projects</Link>
+                </li>
+                <li>
+                    <Link to="/art" style={{ color: 'black' }}>Art</Link>
                 </li>
             </ul>
         </nav>

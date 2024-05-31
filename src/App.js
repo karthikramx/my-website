@@ -4,11 +4,13 @@ import Blog from './Pages/Blog';
 import Portfolio from './Pages/Portfolio';
 import Projects from './Pages/Projects';
 import Concepts from './Pages/Concepts';
+import Art from './Pages/Art';
 import ProjectRAG from './Pages/ProjectPages/ProjectRAG/ProjectRAG';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Sidebar from './components/SideBar/SideBar';
+
 
 
 // TODO: 
@@ -28,6 +30,7 @@ function App() {
             <Route exact path="/projects/RAG" render={() => <ProjectRAG />} />
             <Route path="/projects" render={() => <Projects />} />
             <Route path="/concepts" render={() => <Concepts />} />
+            <Route path="/art" render={() => <Art />} />
           </Switch>
           <Footer />
         </div>
