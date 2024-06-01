@@ -8,8 +8,8 @@ nav {
     top: 0;
     left: 0;
     border: none;
-
     z-index: 2;
+    background-color: white;
 }
 
 nav ul {
@@ -22,20 +22,19 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 20px;
     font-family: sans-serif;
 }
 
 nav ul li a {
-    color: white;
+    color: darkgray; 
     text-decoration: none;
-    font-size: 1.2em;
-    
+    font-size: 1.1em;
 }
 
 nav ul li a:hover {
-    color: #ddd;
+    color: black;
 }
 
 .logo {

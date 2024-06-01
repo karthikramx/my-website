@@ -43,13 +43,6 @@ h1 {
   color: #065970;
 }
 
-/* h2 {
-  font: 1.5em;
-  font-size: 3em;
-  margin: 0.25em 0;
-  color: #3f2fcd;
-} */
-
 h2 :hover {
   font: 1.5em;
   font-size: 2em;
@@ -59,5 +52,5 @@ h2 :hover {
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
