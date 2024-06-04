@@ -30,11 +30,11 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <div >
       <Router>
         <div className="App">
           <NavBar />
-          <Switch>
+          <Switch >
             <Route exact path="/" render={() => <Home />} />
             <Route path="/blog" render={() => <Blog />} />
             <Route path="/portfolio" render={() => <Portfolio />} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import me from '../assets/me.JPG';
+import backgroundImage from '../assets/background.jpeg';
 
 function Home() {
     const imageStyle = {
@@ -19,24 +20,36 @@ function Home() {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <section style={{ marginTop: "100px" }}>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            background: `url(${backgroundImage})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover', // Add this
+            overflow: 'hidden', // Add this
+            height: '100vh',
+            scrollbarGutter: 'none',
+        }}>
+            <div style={{ marginTop: "100px" }}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <div>
                         <div style={imageDivSytle}>
                             <img src={me} alt='Test' style={imageStyle} />
                         </div>
-                        <h1 style={{ textAlign: 'center' }}>Karthik Ram</h1>
+                        <h1 style={{ textAlign: 'center', color: 'black' }}>Karthik Ram</h1>
                     </div>
                     <div style={{ marginLeft: '50px' }}>
-                        <h4 style={{ color: "gray", lineHeight: "2", textAlign: 'center' }}>
+                        <h4 style={{ color: "black", lineHeight: "2", textAlign: 'center' }}>
                             Hello! <br />
                             Welcome to my digital domain... <br />
                             I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
                             Here, I meticulously document my journey, <br /> aiming to transform this space into a awesome repository of my life’s work.</h4>
                     </div>
                 </div>
-            </section>
+            </div>
             <section style={{ marginTop: "40px" }} />
         </div>
     );
