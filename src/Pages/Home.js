@@ -1,6 +1,5 @@
 import React from 'react';
 import me from '../assets/me.JPG';
-import backgroundImage from '../assets/background.jpeg';
 
 function Home() {
     const imageStyle = {
@@ -25,12 +24,10 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
-            background: `url(${backgroundImage})`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover', // Add this
             overflow: 'hidden', // Add this
-            height: '100vh',
             scrollbarGutter: 'none',
         }}>
             <div style={{ marginTop: "100px" }}>
