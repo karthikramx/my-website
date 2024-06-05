@@ -2,6 +2,7 @@ import React from 'react';
 import me from '../assets/me.JPG';
 
 function Home() {
+
     const imageStyle = {
         borderRadius: "50%",
         width: "300px",
@@ -36,10 +37,10 @@ function Home() {
                         <div style={imageDivSytle}>
                             <img src={me} alt='Test' style={imageStyle} />
                         </div>
-                        <h1 style={{ textAlign: 'center', color: 'black' }}>Karthik Ram</h1>
+                        <h1 style={{ textAlign: 'center', color: 'darkgray' }}>Karthik Ram</h1>
                     </div>
                     <div style={{ marginLeft: '50px' }}>
-                        <h4 style={{ color: "black", lineHeight: "2", textAlign: 'center' }}>
+                        <h4 style={{ color: "darkgray", lineHeight: "2", textAlign: 'center' }}>
                             Hello! <br />
                             Welcome to my digital domain... <br />
                             I am a passionate maker who enjoys crafting from scratch. <br /> My interests span Generative AI, Product Design, and Engineering. <br />
