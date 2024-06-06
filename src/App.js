@@ -43,7 +43,6 @@ function App() {
             <Route path="/concepts" render={() => <Concepts />} />
             <Route path="/art" render={() => <Art />} />
           </Switch>
-          <Footer />
         </div>
       </Router>
     </div>

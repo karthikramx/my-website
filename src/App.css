@@ -54,3 +54,30 @@ h2 :hover {
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+html {
+  overflow-y: scroll;
+}
+
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.5); /* Semi-transparent gray */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.5); /* Semi-transparent darker gray */
+}
